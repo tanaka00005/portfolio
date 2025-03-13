@@ -1,0 +1,52 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin fontSize {
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      font-size: 50px;
+    }
+    /*for PC*/
+    @media screen and (min-width: 1024px) {
+      font-size: 100px;
+    }
+  }
+  
+  
+  
+  @mixin subTitleFontSize {
+    @media screen and (max-width: 1024px) {
+      font-size: 20px;
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 70px;
+    }
+  }
+  
+  @mixin headerFontSize {
+    @media screen and (max-width: 1024px) {
+      font-size: 20px;
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 50px;
+    }
+  }
+  
+  @mixin imgSize {
+      @media screen and (max-width: 768px) {
+          font-size: 20px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+          font-size: 50px;
+        }
+        /*for PC*/
+        @media screen and (min-width: 1024px) {
+          font-size: 100px;
+        }
+  }
+  

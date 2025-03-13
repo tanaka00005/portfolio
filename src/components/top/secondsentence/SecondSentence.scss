@@ -1,0 +1,21 @@
+@import "src/style/_functions.scss";
+@import "src/style/_variables.scss";
+
+.about {
+  scroll-behavior: smooth;
+  display: flex;
+
+  .about-font {
+    //   margin-top: 300px;
+    @media screen and (max-width: 1024px) {
+      margin-top: 300px;
+    }
+    @media screen and (min-width: 1024px) {
+      margin-top: 500px;
+    }
+    @include fontSize;
+    color: $aboutColor;
+    writing-mode: vertical-lr;
+    margin-left: 30px;
+  }
+}

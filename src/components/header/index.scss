@@ -1,0 +1,16 @@
+@import "src/style/_functions.scss";
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box; //のちにwedthとかpadding決める時に便利
+}
+
+nav {
+    display:flex;
+    width:80%;
+    margin:20px auto;   //20pxで上下に20px空けるautoで左右に自動的に空けるから中央寄せになる
+    align-items:center; 
+    //background-color: black;
+    @include headerFontSize
+}

@@ -1,0 +1,25 @@
+@import "src/style/_functions.scss";
+@import "src/style/_variables.scss";
+
+.footer {
+  color: black;
+  font-size: 40px;
+  display: flex;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 150px;
+  color: $portfolioColor;
+  border-top: dashed $redColor;
+  height: 200px;
+  align-items: center;
+  @include subTitleFontSize;
+
+  .footer-skill {
+    width: 50%;
+    text-align: center;
+  }
+  .footer-works {
+    width: 50%;
+    text-align: center;
+  }
+}

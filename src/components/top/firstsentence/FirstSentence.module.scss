@@ -1,0 +1,63 @@
+@import "src/style/_functions.scss";
+@import "src/style/_variables.scss";
+
+.content {
+  display: flex;
+  scroll-behavior: smooth;
+  position: relative;
+
+  @media screen and (max-width: 1023px) {
+    //margin-top: 300px;
+    width: 80%;
+    margin: 200px auto 0 auto;
+  }
+ 
+  .imgContainer {
+    //padding: 1rem 2rem;
+    height: 70%;
+    border-radius: 5px;
+    border: 2px solid #333;
+    background:
+        //linear-gradient(90deg, transparent 5%, $mainColor 5% 95%, transparent 95%),
+      linear-gradient(
+        45deg,
+        $mainColor 25%,
+        transparent 25%,
+        transparent 75%,
+        $mainColor 75%
+      ),
+      linear-gradient(
+        45deg,
+        $mainColor 25%,
+        $portfolioColor 25%,
+        $portfolioColor 75%,
+        $mainColor 75%
+      );
+    background-position: 0 0, 10px 10px;
+    background-size: 100% 100%, 20px 20px, 20px 20px;
+    color: #333333;
+  }
+  .imgStyle {
+    position: relative;
+    width: 80%;
+    margin: 40px auto;
+  }
+
+  .rightContent {
+    position: absolute;
+    color: $portfolioColor;
+    @include fontSize;
+    margin-top: 60px;
+    writing-mode: vertical-lr;
+    margin-left: 20px;
+  }
+  .circleWidth {
+    bottom: 20%;
+    left: 8%;
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    background-color: $portfolioColor;
+    border-radius: 50%;
+  }
+}
