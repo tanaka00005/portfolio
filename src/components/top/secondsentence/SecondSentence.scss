@@ -8,12 +8,12 @@
   .about-font {
     //   margin-top: 300px;
     @media screen and (max-width: 1024px) {
-      margin-top: 300px;
+      margin-top: 250px;
     }
     @media screen and (min-width: 1024px) {
       margin-top: 500px;
     }
-    @include fontSize;
+    font-size: 5vw;
     color: $aboutColor;
     writing-mode: vertical-lr;
     margin-left: 30px;

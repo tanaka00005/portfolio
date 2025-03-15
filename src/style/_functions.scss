@@ -49,4 +49,13 @@
           font-size: 100px;
         }
   }
+
+  @mixin IconTitle {
+    @media screen and (max-width: 1024px) {
+      font-size: 30px;
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 50px;
+    }
+  }
   

@@ -4,10 +4,11 @@
 .about-name {
   margin-top: 200px;
   width: 2000px;
+  margin-left: 30px;
   margin-right: 30px;
   color: $portfolioColor;
   p {
-    @include subTitleFontSize;
+    font-size: 4vw;
   }
   .sentence-content {
     display: flex;
