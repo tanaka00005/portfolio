@@ -5,9 +5,9 @@ function FirstSentence() {
   return (
     <div className={styles.content}>
       <div className={styles.imgContainer}>
-      <img className={styles.imgStyle} src="/img/hanabi.jpg" alt="hanabi" />
+        <img className={styles.imgStyle} src="/img/hanabi.jpg" alt="hanabi" />
       </div>
-      
+
       <div className={styles.circleWidth}>
         <div className={styles.circleHeight} />
       </div>

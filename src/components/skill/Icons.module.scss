@@ -1,0 +1,45 @@
+@import "src/style/_functions.scss";
+@import "src/style/_variables.scss";
+
+.icon {
+  padding-left: 8vw;
+  padding-top: 7vw;
+
+  .skillArrayTitle {
+    @include IconTitle;
+    //margin-top: 5vw;
+    // @media screen and (max-width: 1024px) {
+    //     font-size: 30px;
+    //   }
+    //   @media screen and (min-width: 1024px) {
+    //     font-size: 50px;
+    //   }
+    color: $portfolioColor;
+  }
+
+  .grid {
+    padding: 2vw 0;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  }
+
+  .skillArrayBottom {
+    float: left;
+    margin-right: 10vw;
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 1024px) {
+      width: 20vw;
+    }
+    .gridBottom {
+      padding: 4vw 0;
+      display: flex;
+
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(50px, auto));
+    }
+  }
+}

@@ -11,14 +11,14 @@
     width: 80%;
     margin: 200px auto 0 auto;
   }
- 
+
   .imgContainer {
     //padding: 1rem 2rem;
     height: 70%;
     border-radius: 5px;
     border: 2px solid #333;
     background:
-        //linear-gradient(90deg, transparent 5%, $mainColor 5% 95%, transparent 95%),
+      //linear-gradient(90deg, transparent 5%, $mainColor 5% 95%, transparent 95%),
       linear-gradient(
         45deg,
         $mainColor 25%,
@@ -33,14 +33,15 @@
         $portfolioColor 75%,
         $mainColor 75%
       );
-    background-position: 0 0, 10px 10px;
+    //background-position: 0 0, 10px 10px;
     background-size: 100% 100%, 20px 20px, 20px 20px;
     color: #333333;
-  }
-  .imgStyle {
-    position: relative;
-    width: 80%;
-    margin: 40px auto;
+    .imgStyle {
+      position: relative;
+      width: 80%;
+      margin: 4vw auto;
+
+    }
   }
 
   .rightContent {

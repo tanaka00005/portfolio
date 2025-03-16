@@ -1,10 +1,19 @@
 import React from "react";
 
 import "./index.scss";
-import ThirdSentence from "@/components/skill/iconList/ThirdSentence";
+import SkillsTable from "@/components/SkillsTable";
+import Footer from "@/components/footer";
+import IconTable from "@/components/skill/IconTable";
+
 
 function index() {
-  return <ThirdSentence />;
+  return (
+    <div style={{display: "flex", flexDirection: "column"}}>
+      <IconTable />
+      <SkillsTable />
+      <Footer />
+    </div>
+  );
 }
 
 export default index;

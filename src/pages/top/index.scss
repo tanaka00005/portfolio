@@ -10,13 +10,13 @@
 
 body {
   background-color: $mainColor;
-  color: #ffffff;
+  color: black;
   width: 100%;
   height: 100vh;
   overflow: auto; /* スクロールを有効にする */
 }
 
-main {
-  background-color: $mainColor;
-  @include flexCenter;
-}
+// main {
+//   background-color: $mainColor;
+//   @include flexCenter;
+// }

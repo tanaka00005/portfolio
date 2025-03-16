@@ -8,6 +8,9 @@ function Footer() {
       <div className="footer-skill">
         <Link href={"/skill"}>skills</Link>{" "}
       </div>
+      <div className="footer-skill">
+        <Link href={"/"}>top</Link>{" "}
+      </div>
       {/* "/skill"にすることでskillのindexに遷移 */}
       <div className="footer-works">works</div>
     </div>

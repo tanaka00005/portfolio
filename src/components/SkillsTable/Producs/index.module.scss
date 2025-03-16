@@ -1,0 +1,25 @@
+@import "src/style/_functions.scss";
+@import "src/style/_variables.scss";
+
+.productContainer {
+  display: grid;
+  gap: 10vw;
+  padding: 5vw;
+  @include productSize;
+  .name {
+    font-size: 20px;
+  }
+  .product {
+    background-color: gray;
+    padding: 5vw;
+    .description {
+      font-size: 2vw;
+    }
+    .image {
+      padding-top: 5%;
+      width: 100px;
+      height: 80%;
+      object-fit: cover;
+    }
+  }
+}

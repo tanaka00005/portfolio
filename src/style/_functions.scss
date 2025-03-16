@@ -1,61 +1,82 @@
 @mixin flexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  @mixin fontSize {
-    @media screen and (max-width: 768px) {
-      font-size: 30px;
-    }
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      font-size: 50px;
-    }
-    /*for PC*/
-    @media screen and (min-width: 1024px) {
-      font-size: 100px;
-    }
-  }
-  
-  
-  
-  @mixin subTitleFontSize {
-    @media screen and (max-width: 1024px) {
-      font-size: 20px;
-    }
-    @media screen and (min-width: 1024px) {
-      font-size: 70px;
-    }
-  }
-  
-  @mixin headerFontSize {
-    @media screen and (max-width: 1024px) {
-      font-size: 20px;
-    }
-    @media screen and (min-width: 1024px) {
-      font-size: 50px;
-    }
-  }
-  
-  @mixin imgSize {
-      @media screen and (max-width: 768px) {
-          font-size: 20px;
-        }
-        @media screen and (min-width: 768px) and (max-width: 1024px) {
-          font-size: 50px;
-        }
-        /*for PC*/
-        @media screen and (min-width: 1024px) {
-          font-size: 100px;
-        }
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  @mixin IconTitle {
-    @media screen and (max-width: 1024px) {
-      font-size: 30px;
-    }
-    @media screen and (min-width: 1024px) {
-      font-size: 50px;
-    }
+@mixin fontSize {
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
   }
-  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 50px;
+  }
+  /*for PC*/
+  @media screen and (min-width: 1024px) {
+    font-size: 100px;
+  }
+}
+
+@mixin subTitleFontSize {
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 70px;
+  }
+}
+
+@mixin headerFontSize {
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 50px;
+  }
+}
+
+@mixin imgSize {
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 50px;
+  }
+  /*for PC*/
+  @media screen and (min-width: 1024px) {
+    font-size: 100px;
+  }
+}
+
+@mixin IconTitle {
+  @media screen and (max-width: 1024px) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 40px;
+  }
+}
+@mixin productFontSize {
+  @media screen and (max-width: 1024px) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 30px;
+  }
+}
+@mixin productSize {
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(50px, 50%));
+  }
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(2, minmax(50px, 20%));
+  }
+}
+@mixin productSize {
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(auto-fill, minmax(50px, 40%));
+  }
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(auto-fill, minmax(50px, 20%));
+  }
+}
