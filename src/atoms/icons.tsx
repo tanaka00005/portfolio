@@ -1,79 +1,91 @@
 import React from "react";
 import styled from "./Icons.module.scss";
+import {
+  SiReact,
+  SiNextdotjs,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiMui,
+  SiNodedotjs,
+  SiHono,
+  SiExpress,
+  SiMongodb,
+  SiPrisma,
+  SiGithub,
+  SiC,
+  SiPython,
+  SiFirebase,
+  SiAutodeskmaya,
+  SiSvelte,
+  SiPostgresql,
+  SiSass,
+  SiGit,
+} from "@icons-pack/react-simple-icons";
 
-import { FaNodeJs, FaReact } from "react-icons/fa";
-import { SiNextdotjs } from "react-icons/si";
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { FaJs } from "react-icons/fa";
-import { TbBrandTypescript } from "react-icons/tb";
-import { SiMui } from "react-icons/si";
-import { SiHono } from "react-icons/si";
-import { SiExpress } from "react-icons/si";
-import IconTable from "./IconTable";
-import { IoLogoFirebase } from "react-icons/io5";
-import { SiMongodb } from "react-icons/si";
-import { SiPrisma } from "react-icons/si";
-import { FaGithub } from "react-icons/fa";
 import { SiAdobeillustrator } from "react-icons/si";
-import { SiAutodeskmaya } from "react-icons/si";
 
 type Icon = {
-    name: string;
-    icon: React.ReactNode;
-  };
+  name: string;
+  icon: React.ReactNode;
+};
 
 type IconItem = {
-    FrontEnds?: Icon[]; //?で省略可能にする
-    BackEnds?: Icon[];
-    Database?: Icon[];
-    Etc?: Icon[];
-  };
+  FrontEnds?: Icon[]; //?で省略可能にする
+  BackEnds?: Icon[];
+  Etc?: Icon[];
+};
+
+const clolor = "default";
+const size = "40";
 
 export const IconLists: IconItem[] = [
   {
     FrontEnds: [
-      { name: "react", icon: <FaReact size={55} color="rgb(96,219,251)" /> },
-      { name: "next", icon: <SiNextdotjs size={55} color="black" /> },
-      { name: "html", icon: <FaHtml5 size={55} color="rgb(241,102,43)" /> },
-      { name: "css", icon: <FaCss3Alt size={55} color="rgb(52,170,220)" /> },
-      { name: "js", icon: <FaJs size={55} color="rgb(255,215,0)" /> },
+      { name: "svelte", icon: <SiSvelte size={size} color={clolor}/> },
+      { name: "react", icon: <SiReact size={size} color={clolor}/> },
+      { name: "next", icon: <SiNextdotjs size={size} color={clolor}  /> },
+      { name: "html", icon: <SiHtml5 size={size} color={clolor}  /> },
+      { name: "css", icon: <SiCss3 size={size} color={clolor}  /> },
+      { name: "js", icon: <SiJavascript size={size} color={clolor}  /> },
       {
-        name: "ts",
-        icon: <TbBrandTypescript size={55} color="rgb(30,144,255)" />,
+        name: "typescript",
+        icon: <SiTypescript size={size} color={clolor}  />,
       },
-      { name: "mui", icon: <SiMui size={55} color="rgb(63,81,181)" /> },
+      { name: "mui", icon: <SiMui size={size} color={clolor}  /> },
+      { name: "scss", icon: <SiSass size={size} color={clolor}  /> },
     ],
   },
   {
     BackEnds: [
       {
         name: "nodejs",
-        icon: <FaNodeJs size={55} color="rgb(102,187,106)" />,
+        icon: <SiNodedotjs size={size} color={clolor}  />,
       },
       {
         name: "hono",
-        icon: <SiHono size={55} color="rgb(255,151,89)" />,
+        icon: <SiHono size={size} color={clolor}  />,
       },
       {
         name: "express",
-        icon: <SiExpress size={55} color="black"/>,
+        icon: <SiExpress size={size} color={clolor}  />,
       },
-    ],
-  },
-  {
-    Database: [
       {
         name: "firebase",
-        icon: <IoLogoFirebase size={55} color="rgb(255,165,13)" />,
+        icon: <SiFirebase size={size} color={clolor}  />,
       },
       {
         name: "mongodb",
-        icon: <SiMongodb size={55} color="rgb(85,199,124)" />,
+        icon: <SiMongodb size={size} color={clolor}  />,
       },
       {
         name: "prisma",
-        icon: <SiPrisma size={55} color="black"/>,
+        icon: <SiPrisma size={size} color={clolor}  />,
+      },
+      {
+        name: "postgresql",
+        icon: <SiPostgresql size={size} color={clolor}  />,
       },
     ],
   },
@@ -81,15 +93,27 @@ export const IconLists: IconItem[] = [
     Etc: [
       {
         name: "github",
-        icon: <FaGithub size={55} color="black"/>,
+        icon: <SiGithub size={size} color={clolor}  />,
+      },
+      {
+        name: "git",
+        icon: <SiGit size={size} color={clolor}  />,
       },
       {
         name: "illustrator",
-        icon: <SiAdobeillustrator size={55} color="rgb(48,0,0)" />,
+        icon: <SiAdobeillustrator size={size} color={clolor}  />,
       },
       {
         name: "Maya",
-        icon: <SiAutodeskmaya size={55} color="rgb(56,165,204)" />,
+        icon: <SiAutodeskmaya size={size} color={clolor}  />,
+      },
+      {
+        name: "C",
+        icon: <SiC size={size} color={clolor}  />,
+      },
+      {
+        name: "Python",
+        icon: <SiPython size={size} color={clolor}  />,
       },
     ],
   },

@@ -1,11 +1,9 @@
-import React from 'react'
-import Products from './Producs'
+import React from "react";
+import Products from "./Producs";
 function SkillsTable() {
   return (
-    <div>   
-      <h1>
-        <Products />
-      </h1>
+    <div>
+      <Products />
     </div>
   );
 }

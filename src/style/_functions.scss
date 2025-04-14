@@ -66,14 +66,6 @@
 }
 @mixin productSize {
   @media screen and (max-width: 1024px) {
-    grid-template-columns: repeat(2, minmax(50px, 50%));
-  }
-  @media screen and (min-width: 1024px) {
-    grid-template-columns: repeat(2, minmax(50px, 20%));
-  }
-}
-@mixin productSize {
-  @media screen and (max-width: 1024px) {
     grid-template-columns: repeat(auto-fill, minmax(50px, 40%));
   }
   @media screen and (min-width: 1024px) {

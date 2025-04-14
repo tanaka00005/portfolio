@@ -1,0 +1,67 @@
+@import "src/style/_functions.scss";
+@import "src/style/_variables.scss";
+
+.wrap {
+  display: flex;
+  //align-items: center;
+  //height: 30em;
+  overflow: hidden;
+}
+
+.productContainer {
+  display: flex;
+  animation: loop-slide 20s infinite linear 1s both;
+}
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.product {
+  // width: 10em;
+  @media screen and (max-width: 1024px) {
+    //   margin-top: 250px;
+    width: 50vw;
+    height: 60vw;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 30vw;
+    height: 30vw;
+  }
+  
+  margin-right: 1vw;
+  padding: 3em;
+  background-color: $aboutColor;
+
+  .image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.wrapSlidePaused {
+  animation-play-state: paused !important;
+}
+.touchArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+.contentHover {
+  transition: all 0.2s;
+}
+.contentHover:hover {
+  transform: translateY(-20px);
+  border-radius: 0 10%;
+  box-shadow: 0 3px 10px 0 #333;
+  opacity: 0.8;
+  cursor: pointer;
+}
