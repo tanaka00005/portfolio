@@ -1,67 +1,60 @@
 @import "src/style/_functions.scss";
 @import "src/style/_variables.scss";
 
-.wrap {
-  display: flex;
-  //align-items: center;
-  //height: 30em;
+.sliderWrapper {
   overflow: hidden;
-}
+  width: 80%;
+  height: 28em;
+  margin: 0 auto;
+  position: relative;
+  padding: 3em 0;
+  background-color: $mainColor;
 
-.productContainer {
-  display: flex;
-  animation: loop-slide 20s infinite linear 1s both;
-}
-@keyframes loop-slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-.product {
-  // width: 10em;
-  @media screen and (max-width: 1024px) {
-    //   margin-top: 250px;
-    width: 50vw;
-    height: 60vw;
-  }
-  @media screen and (min-width: 1024px) {
-    width: 30vw;
-    height: 30vw;
-  }
-  
-  margin-right: 1vw;
-  padding: 3em;
-  background-color: $aboutColor;
-
-  .image {
-    object-fit: cover;
+  .sliderInner {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
     width: 100%;
-    height: 100%;
-  }
-}
+    height: 25em;
 
-.wrapSlidePaused {
-  animation-play-state: paused !important;
-}
-.touchArea {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
-  pointer-events: none;
-}
-.contentHover {
-  transition: all 0.2s;
-}
-.contentHover:hover {
-  transform: translateY(-20px);
-  border-radius: 0 10%;
-  box-shadow: 0 3px 10px 0 #333;
-  opacity: 0.8;
-  cursor: pointer;
+    .productSlide {
+      flex: 0 0 100%;
+      max-width: 100%;
+      height: 25em;
+      padding: 2em;
+      text-align: center;
+      background-color: $aboutColor;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+
+      .image {
+        position: relative;
+
+        // width: 20em;
+        // height: 15em;
+        border-radius: 10px;
+        object-fit: cover;
+        margin: 0 auto;
+      }
+
+      .productTitle {
+        margin-top: 1em;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #222;
+      }
+
+      .productType {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #666;
+        margin-top: 0.3em;
+      }
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
 }

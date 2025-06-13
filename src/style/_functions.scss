@@ -6,23 +6,23 @@
 
 @mixin fontSize {
   @media screen and (max-width: 768px) {
-    font-size: 30px;
+    font-size: 10vw;
   }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    font-size: 50px;
+    font-size: 8vw;
   }
   /*for PC*/
   @media screen and (min-width: 1024px) {
-    font-size: 100px;
+    font-size: 6vw;
   }
 }
 
 @mixin subTitleFontSize {
   @media screen and (max-width: 1024px) {
-    font-size: 20px;
+    font-size: 7vw;
   }
   @media screen and (min-width: 1024px) {
-    font-size: 70px;
+    font-size: 4vw;
   }
 }
 
@@ -72,3 +72,4 @@
     grid-template-columns: repeat(auto-fill, minmax(50px, 20%));
   }
 }
+

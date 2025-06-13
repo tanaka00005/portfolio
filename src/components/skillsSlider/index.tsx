@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./index.module.scss";
 import Image from "next/image";
 
 function SkillsSlider() {
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
   const products = [
@@ -11,74 +12,80 @@ function SkillsSlider() {
       name: "SysPay",
       type: ["web", "フロントエンド"],
       image: "/img/SysPayImg.png",
-      description:
-        "大学内工科展優秀賞。       学園祭で行ったサークルの模擬店で使用するための会計システムです。昨年使用した会計システムをフィードバックし、改善点を修正して、研究室などで行われた研究を競う工科展に出展しました。",
+      description: "大学内工科展優秀賞。サークルの模擬店用の会計システム。",
+      width: 300,
+      height: 400,
     },
     {
       name: "ETロボコン",
       type: ["組み込み", "モデル図"],
       image: "/img/ETrobo.jpg",
-      description:
-        "学校側が募っているプロジェクトに私が興味を持ち参加させて頂きました。この大会はラズベリーパイとスパイクを搭載したレゴのロボットを組み込み技術を用いて動かして競争するソフトウェアエンジニア向けのロボットコンテストです。そのコンテストに同じ学内の3人が応募して臨みました。",
+      description: "ラズパイとレゴを使ったロボコン。組み込みで競技参加。",
+      width: 200,
+      height: 400,
     },
     {
       name: "HeartLink",
       type: ["web", "フロントエンド"],
       image: "/img/HeartLink.png",
-      description:
-        "心拍数を測定し相性を診断するアプリです。主な機能として、会話内容の提案、心拍のシンクロ率の表示、心拍のグラフ化の3つを提供します。話題の提案により会話が弾み、自然なコミュニケーションが生まれます。シンクロ率の表示では、お互いの心拍の一致度を計算し、心拍の変化をグラフ化することで、どのタイミングでドキドキしたのかを振り返ることができ、心理的なつながりを可視化できます。",
+      description: "心拍で相性診断する恋愛系アプリ。",
+      width: 200,
+      height: 400,
     },
     {
       name: "HottoSpot",
       type: ["web", "フロントエンド"],
       image: "/img/Hottospot.png",
-      description:
-        "技育CAMP vol.23 努力賞。       ユーザーにいいねを1~10の段階でつけてもらい、熱い場所を可視化でき簡単に見つけることができます。また、ランキングで表示することでどの場所が最も熱い場所なのかも確認できます。また、友達同士ではアルバムの共有をすることができます。友達の追加はフレンドコードまたは、QRコードを読み込むことで互いに登録されます。",
+      description: "バズっている場所を数値化・可視化するマップアプリ。",
+      width: 250,
+      height: 400,
+    },
+    {
+      name: "Plantalk",
+      type: ["web", "フロントエンド，バックエンド"],
+      image: "/img/plantalk.png",
+      description: "小学生に向けた植物育成アプリ",
+      width: 470,
+      height: 470,
     },
   ];
 
-  const handleTouchStart = () => {
-    setIsPaused(true);
-  };
+  useEffect(() => {
+    if (isPaused) return;
 
-  const handleTouchStop = () => {
-    setIsPaused(false);
-  };
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % products.length);
+    }, 2000); // 2秒ごとに次のカードへ
+
+    return () => clearInterval(timer);
+  }, [isPaused]);
+
+  const handleTouchStart = () => setIsPaused(true);
+  const handleTouchStop = () => setIsPaused(false);
 
   return (
-    <div>
-      <div className={styles.wrap}>
-        {[...Array(3)].map((_, i) => (
-          <div key={i}>
-            <ul
-              className={`${styles.productContainer} ${
-                isPaused ? styles.wrapSlidePaused : ""
-              }`}
-            >
-              {products.map((product) => (
-                <li
-                  key={product.name}
-                  className={`${styles.product} ${styles.contentHover}`}
-                >
-                  {/* <div className={styles.name}>{product.name}</div> */}
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    className={styles.image}
-                    width={400}
-                    height={400}
-                  />
-                </li>
-              ))}
-              <div
-                style={{ pointerEvents: isPaused ? "auto" : "none" }}
-                className={styles.touchArea}
-                onTouchStart={handleTouchStart}
-                onMouseEnter={handleTouchStart}
-                onMouseLeave={handleTouchStop}
-                onTouchEnd={handleTouchStop}
-              ></div>
-            </ul>
+    <div className={styles.sliderWrapper}>
+      <div
+        className={styles.sliderInner}
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        onMouseEnter={handleTouchStart}
+        onMouseLeave={handleTouchStop}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchStop}
+      >
+        {products.map((product) => (
+          <div key={product.name} className={styles.productSlide}>
+            <img
+              src={product.image}
+              alt={product.name}
+              className={styles.image}
+              width={product.width}
+              height={product.height}
+            />
+            {/* <p className={styles.productTitle}>{product.name}</p> */}
+
+            <p className={styles.productTitle}>{product.name}</p>
+            <p className={styles.productType}>{product.type.join(" / ")}</p>
           </div>
         ))}
       </div>

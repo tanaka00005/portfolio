@@ -7,9 +7,9 @@
   display: flex;
   margin-left: 30px;
   margin-right: 30px;
-  margin-top: 150px;
+
   color: $portfolioColor;
-  border-top: dashed $redColor;
+  // border-top: dashed $redColor;
   height: 200px;
   align-items: center;
   @include subTitleFontSize;

@@ -3,17 +3,50 @@
 
 .icon {
   padding: 7vw 10vw;
-
+  
+.category{
+  padding-bottom:3em
+}
   .skillArrayTitle {
     @include IconTitle;
     color: $portfolioColor;
   }
 
   .grid {
-    padding: 2vw 0;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  padding: 2vw 0;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  justify-items: center;
+
+  .iconItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  .iconWrapper {
+    display: flex;
+    align-items: flex-end; // アイコンの下端をそろえる
+    justify-content: center;
+    height: 3em; // ここで高さを調整して、中央あたりに合わせる
+    margin-bottom: 0.5em;
+
+    svg {
+      width: 2em;
+      height: 2em;
+    }
+  }
+
+  .name {
+    text-align: center;
+    // @media screen and (max-width: 1024px) {
+    //   font-size: 3vw;
+    // }
+    // @media screen and (min-width: 1024px) {
+    //   font-size: 1.5vw;
+    // }
+  }
+}
 
 }

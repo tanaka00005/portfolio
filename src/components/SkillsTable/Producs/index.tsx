@@ -31,6 +31,13 @@ function Products() {
       description:
         "技育CAMP vol.23 努力賞。       ユーザーにいいねを1~10の段階でつけてもらい、熱い場所を可視化でき簡単に見つけることができます。また、ランキングで表示することでどの場所が最も熱い場所なのかも確認できます。また、友達同士ではアルバムの共有をすることができます。友達の追加はフレンドコードまたは、QRコードを読み込むことで互いに登録されます。",
     },
+    {
+      name: "Plantalk",
+      type: ["web", "フロントエンド,バックエンド"],
+      image: "img/Hottospot.png",
+      description:
+        "小学生向けの植物育成アプリ",
+    },
   ];
   return (
     <div className={styles.productContainer}>

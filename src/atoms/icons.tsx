@@ -22,6 +22,10 @@ import {
   SiPostgresql,
   SiSass,
   SiGit,
+  SiGo,
+  SiAmazonwebservices,
+  SiMysql,
+  SiDocker
 } from "@icons-pack/react-simple-icons";
 
 import { SiAdobeillustrator } from "react-icons/si";
@@ -48,7 +52,7 @@ export const IconLists: IconItem[] = [
       { name: "next", icon: <SiNextdotjs size={size} color={clolor}  /> },
       { name: "html", icon: <SiHtml5 size={size} color={clolor}  /> },
       { name: "css", icon: <SiCss3 size={size} color={clolor}  /> },
-      { name: "js", icon: <SiJavascript size={size} color={clolor}  /> },
+      { name: "javascript", icon: <SiJavascript size={size} color={clolor}  /> },
       {
         name: "typescript",
         icon: <SiTypescript size={size} color={clolor}  />,
@@ -87,6 +91,14 @@ export const IconLists: IconItem[] = [
         name: "postgresql",
         icon: <SiPostgresql size={size} color={clolor}  />,
       },
+      {
+        name: "mysql",
+        icon: <SiMysql size={size} color={clolor}  />,
+      },
+      {
+        name: "go",
+        icon: <SiGo size={size} color={clolor}  />,
+      },
     ],
   },
   {
@@ -114,6 +126,14 @@ export const IconLists: IconItem[] = [
       {
         name: "Python",
         icon: <SiPython size={size} color={clolor}  />,
+      },
+      {
+        name: "aws",
+        icon: <SiAmazonwebservices size={size} color={clolor}  />,
+      },
+      {
+        name: "docker",
+        icon: <SiDocker size={size} color={clolor}  />,
       },
     ],
   },

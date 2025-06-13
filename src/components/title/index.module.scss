@@ -1,0 +1,8 @@
+@import "src/style/_functions.scss";
+@import "src/style/_variables.scss";
+
+.title{
+    @include fontSize;
+    text-align: center;
+    color: $redColor;
+}
