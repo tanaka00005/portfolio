@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "./Icons.module.scss";
 import {
   SiReact,
   SiNextdotjs,

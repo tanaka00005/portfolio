@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import "./index.scss";
-import Link from "next/link";
 import { SiX, SiQiita, SiGithub } from "@icons-pack/react-simple-icons";
 
 function Footer() {
@@ -28,10 +27,6 @@ function Footer() {
   };
   return (
     <>
-      {/* <div>x</div><span>https://x.com/tanaka00005_1</span>
-      <div>qiita</div><span>hhttps://qiita.com/meiyutianzhong557</span>
-      <div>github</div><span>https://x.com/tanaka00005_1</span> */}
-
       <footer className="footer">
         <div className="footer__social">
           {socialLinks.map((social, index) => {

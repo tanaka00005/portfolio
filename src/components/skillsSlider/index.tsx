@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import styles from "./index.module.scss";
-import Image from "next/image";
 import Link from "next/link";
 
 function SkillsSlider() {
@@ -68,11 +67,6 @@ function SkillsSlider() {
 
   const handleTouchStart = () => setIsPaused(true);
   const handleTouchStop = () => setIsPaused(false);
-
-  const handleLink = (link:string) => {
-    
-  }
-
   return (
     <div className={styles.sliderWrapper}>
       <div

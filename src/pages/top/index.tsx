@@ -1,7 +1,6 @@
 import "./index.scss";
 //import FirstSentence from "../../components/top/firstsentence/FirstSentence";
 import SecondSentence from "../../components/top/secondsentence/SecondSentence";
-import Footer from "@/components/footer";
 import SkillsSlider from "@/components/skillsSlider";
 import Awards from "@/components/Awards";
 import IconTable from "@/components/skill/IconTable";

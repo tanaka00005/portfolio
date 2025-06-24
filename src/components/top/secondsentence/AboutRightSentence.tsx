@@ -1,10 +1,9 @@
 "use client"
-import React, { useState } from "react";
+import React from "react";
 import "./AboutRightSentence.scss";
 import Footer from "@/components/footer";
 
 function AboutRightSentence() {
-  const [detail,setDetail] = useState(false);
   return (
     <div className="about-name">
       <div className="name">田中美羽 <Footer /></div>
@@ -19,14 +18,8 @@ function AboutRightSentence() {
       <div className="main-text">
           滋賀県出身の大学生です。好きな事は食べる事。和食派、魚派です。将来は、小さいことでもサポートできるような製品を開発していきたいと考えています。今はwebをメインに開発していますがハードウェアなど、ものづくり全般に興味があります。
         </div>
-        
-        {/* <div onClick={() => setDetail(!detail)}>詳しく見る</div> */}
 
-        {
-          detail && (
-            <div>あああああ</div>
-          )
-        }
+        
     </div>
   );
 }
