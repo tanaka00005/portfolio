@@ -1,16 +1,25 @@
 @import "src/style/_functions.scss";
+@import "src/style/_variables.scss";
 
-* {
-    margin:0;
-    padding:0;
-    box-sizing:border-box; //のちにwedthとかpadding決める時に便利
-}
+.footer {
+  color: black;
+  font-size: 40px;
+  display: flex;
+  margin-left: 30px;
+  margin-right: 30px;
 
-nav {
-    display:flex;
-    width:80%;
-    margin:20px auto;   //20pxで上下に20px空けるautoで左右に自動的に空けるから中央寄せになる
-    align-items:center; 
-    //background-color: black;
-    @include headerFontSize
+  color: $portfolioColor;
+  // border-top: dashed $redColor;
+  height: 200px;
+  align-items: center;
+  @include subTitleFontSize;
+
+  .footer-skill {
+    width: 50%;
+    text-align: center;
+  }
+  .footer-works {
+    width: 50%;
+    text-align: center;
+  }
 }

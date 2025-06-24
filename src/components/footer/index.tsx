@@ -4,16 +4,12 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <div className="footer">
-      <div className="footer-skill">
-        <Link href={"/skill"}>skills</Link>{" "}
-      </div>
-      <div className="footer-skill">
-        <Link href={"/"}>top</Link>{" "}
-      </div>
-      {/* "/skill"にすることでskillのindexに遷移 */}
-      <div className="footer-works">works</div>
-    </div>
+    <>
+      <div>information</div>
+      <div>x</div>
+      <div>qiita</div>
+      <div>github</div>
+    </>
   );
 }
 

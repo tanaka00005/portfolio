@@ -5,7 +5,7 @@ import Image from "next/image";
 function AboutLeftSentence() {
   return (
     <div>
-      <div className={styles.profile}>profile</div>
+      {/* <div className={styles.profile}>profile</div> */}
       <Image
         className={styles.imgStyle}
         src="/img/myImg.jpg"

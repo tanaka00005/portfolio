@@ -15,6 +15,7 @@ function SkillsSlider() {
       description: "大学内工科展優秀賞。サークルの模擬店用の会計システム。",
       width: 300,
       height: 400,
+
     },
     {
       name: "ETロボコン",
