@@ -38,7 +38,7 @@ function Footer() {
                 onClick={() => openExternalLink(social.url)}
                 aria-label={`${social.label}を開く`}
               >
-                <IconComponent size={20} />
+                <IconComponent size={20} color="rgb(163, 29, 29)"/>
               </button>
             );
           })}
