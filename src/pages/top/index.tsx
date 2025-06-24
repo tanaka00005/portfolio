@@ -28,7 +28,7 @@ export default function Top() {
       <IconTable />
 
       <Awards />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

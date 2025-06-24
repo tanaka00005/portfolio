@@ -1,12 +1,13 @@
 "use client"
 import React, { useState } from "react";
 import "./AboutRightSentence.scss";
+import Footer from "@/components/footer";
 
 function AboutRightSentence() {
   const [detail,setDetail] = useState(false);
   return (
     <div className="about-name">
-      <p>田中美羽</p>
+      <div className="name">田中美羽 <Footer /></div>
       <div className="sentence-content">
         <div className="university-name">
           <div>愛知工業大学</div>

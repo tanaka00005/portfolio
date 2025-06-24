@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./index.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 function SkillsSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,7 +16,7 @@ function SkillsSlider() {
       description: "大学内工科展優秀賞。サークルの模擬店用の会計システム。",
       width: 300,
       height: 400,
-
+      link:"https://github.com/tanaka00005/sys_register_app"
     },
     {
       name: "ETロボコン",
@@ -24,6 +25,7 @@ function SkillsSlider() {
       description: "ラズパイとレゴを使ったロボコン。組み込みで競技参加。",
       width: 200,
       height: 400,
+      link:""
     },
     {
       name: "HeartLink",
@@ -32,6 +34,7 @@ function SkillsSlider() {
       description: "心拍で相性診断する恋愛系アプリ。",
       width: 200,
       height: 400,
+      link:"https://github.com/tanaka00005/HeartLink"
     },
     {
       name: "HottoSpot",
@@ -40,6 +43,7 @@ function SkillsSlider() {
       description: "バズっている場所を数値化・可視化するマップアプリ。",
       width: 250,
       height: 400,
+      link:"https://github.com/hottospot"
     },
     {
       name: "Plantalk",
@@ -48,6 +52,7 @@ function SkillsSlider() {
       description: "小学生に向けた植物育成アプリ",
       width: 470,
       height: 470,
+      link:"https://github.com/tanaka00005/plantalk_backend"
     },
   ];
 
@@ -64,6 +69,10 @@ function SkillsSlider() {
   const handleTouchStart = () => setIsPaused(true);
   const handleTouchStop = () => setIsPaused(false);
 
+  const handleLink = (link:string) => {
+    
+  }
+
   return (
     <div className={styles.sliderWrapper}>
       <div
@@ -75,7 +84,7 @@ function SkillsSlider() {
         onTouchEnd={handleTouchStop}
       >
         {products.map((product) => (
-          <div key={product.name} className={styles.productSlide}>
+          <Link key={product.name} className={styles.productSlide} href={product.link}>
             <img
               src={product.image}
               alt={product.name}
@@ -87,7 +96,7 @@ function SkillsSlider() {
 
             <p className={styles.productTitle}>{product.name}</p>
             <p className={styles.productType}>{product.type.join(" / ")}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

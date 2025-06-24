@@ -4,10 +4,11 @@
 .about-name {
   flex: 1 1 400px;
   max-width: 800px;
-  padding: 0em 2em 0em;
+
   color: $portfolioColor;
 
-  p {
+  .name{
+    display: flex;
     font-weight: bold;
     margin-bottom: 0.5em;
     @media screen and (max-width: 1024px) {
